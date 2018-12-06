@@ -1,0 +1,25 @@
+@import "./base/bootstrap";
+@import "./base/animations";
+@import "./base/base";
+@import "./base/main";
+@import "./base/typography";
+@import "./base/ultilities";
+
+@import "./abstracts/functions";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+@import "./components/buttons";
+@import "./components/composition";
+@import "./components/navbar";
+
+@import "./layouts/grid";
+@import "./layouts/header";
+@import "./layouts/nav";
+
+@import "./pages/home";
+@import "./pages/hafalan";
+@import "./pages/profile";
+@import "./pages/session";
+@import "./pages/surat-list";
+@import "./pages/surat";

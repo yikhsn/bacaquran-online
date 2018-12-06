@@ -1,0 +1,123 @@
+.search {
+  height: 80vh;
+  background-image: linear-gradient(
+    to right bottom,
+    #00000088,
+    #00000088 
+  ),
+  url('../../assets/img/background-gold.jpg');
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  background-attachment: fixed;
+  transition: all .5s ease-in;
+  
+  &--box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 60%;
+    height: auto;
+    font-size: 1.5rem;
+    
+    &__logo {
+      margin-bottom: 40px;
+      
+      img {
+        width: 450px;
+        height: auto;
+      }
+    }
+    
+    &__input {
+      display: inline-block;
+      width: 85%;
+      height: 60px;
+      margin: 0;
+    }
+
+    &__button {
+      display: inline-block;
+      border: none;
+      margin: 0;
+      background-color: #FBD379;
+      color: #000000;
+      width: 10%;
+      height: 60px;
+      
+      &:hover {
+        background-color: #fac858;
+        color: #ffffff;
+      }
+
+    }
+  }
+}
+
+.surats {
+  margin: 40px 120px;
+  
+  &--title {
+    display: inline;
+    color: #FBD379;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 2.3rem;
+    }
+    
+    a {
+      color: #FBD379;
+      margin-bottom: 40px;
+      text-decoration: none;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &--box {
+    box-sizing: border-box;
+    
+    &__single {
+      font-size: 1.6rem;
+      color: #FBD379;
+      margin-bottom: 10px;
+      border-radius: 100px;
+      transition: .5s all ease-out;
+      
+      &:hover{
+        text-decoration: none;
+        color: #FBD379;
+        background-color: #333333;
+      }
+    }
+  }
+}
+
+.surat {
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  
+  &--nomor {
+    font-size: 1.7rem;
+  }
+
+  &--nama {
+    font-size: 2rem;
+  }
+  
+  &--nama-arab {
+    font-family: 'scheherazade';
+    font-weight: 500;
+    font-size: 4rem;
+    float: right;
+  }
+
+}

@@ -1,0 +1,143 @@
+.keterangan-surat-container {
+    height: 60vh;
+    background-image: linear-gradient(
+    to right bottom,
+    #00000088,
+    #00000088
+    ),
+    url('../../assets/img/background-gold.jpg');
+    /* background-color: #333333; */
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    background-attachment: fixed; 
+    margin-bottom: 0;
+  }
+  
+  .keterangan-surat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  
+  .keterangan-surat-nama-arab {
+    font-family: 'scheherazade';
+    font-size: 15rem;
+    margin: 0;
+  
+  }
+  
+  .keterangan-surat-nama-indo {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .keterangan-surat-arti-nama {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .body-ayats-container {
+    background-color: #333333;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .body-ayats {
+    margin: 40px 150px;
+  }
+  
+  .single-ayat {
+    display: flex;
+    font-size: 2rem;
+    color: white;
+    padding: 80px 0;
+    border-bottom: 1px solid #FBD379;
+  }
+  
+  .single-ayat:last-child {
+    margin-bottom: 0;
+  }
+  
+  .single-ayat-kiri {
+    width: 10%;
+    display: block;
+  }
+  
+  .ayat-nomor-surat {
+    color: #FBD379;
+    font-size: 1.5rem;
+    padding: 12px 0;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    border-radius: 45px;
+    border: 2px solid #FBD379;
+    margin-bottom: 20px;
+  }
+  
+  .ayat-putar-suara {
+    width: 5rem;
+    margin-bottom: 20px;
+  }
+  
+  .ayat-share {
+    width: 5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ayat-share-twitter {
+    width: 2rem;
+  
+  }
+  
+  .ayat-share-facebook {
+    width: 2rem;
+  
+  }
+  
+  .single-ayat-kanan {
+    width: 90%;
+  }
+  
+  .ayat-teks-arab {
+    font-family: 'scheherazade';
+    font-size: 5rem;
+    color: #FBD379;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    text-align: right;
+  }
+  
+  .ayat-terjemahan {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  
+  .ayat-putar-suara button {
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #333333;
+    outline: none;
+  }
+  
+  .ayat-putar-suara .ayat-suara-button-play {
+    background-image: url('../../assets/img/play.svg');
+  }
+
+  .ayat-putar-suara .ayat-suara-button-pause {
+    background-image: url('../../assets/img/pause.svg');
+  }
+  
