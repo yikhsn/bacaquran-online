@@ -19,7 +19,7 @@
                 <a href="/surat" class="button button-animated button-animated-left header-button__read">
                     Baca Qur'an
                 </a>
-                <a href="/surat/cari" class="button button-animated button-animated-right header-button__read">
+                <a href="/surat" class="button button-animated button-animated-right header-button__read">
                     Cari Surat
                 </a>
                 

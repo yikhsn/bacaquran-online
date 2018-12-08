@@ -18668,7 +18668,7 @@ var Search = function () {
                             case 0:
                                 _context.prev = 0;
                                 _context.next = 3;
-                                return __WEBPACK_IMPORTED_MODULE_1_axios___default()('http://127.0.0.1:8000/api/surat/' + this.query);
+                                return __WEBPACK_IMPORTED_MODULE_1_axios___default()('http://127.0.0.1:8000/api/surat/query/' + this.query);
 
                             case 3:
                                 res = _context.sent;

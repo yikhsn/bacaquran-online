@@ -8,7 +8,7 @@ export default class Search {
 
     async getResults(){
         try {
-            const res = await axios(`http://127.0.0.1:8000/api/surat/${this.query}`);
+            const res = await axios(`http://127.0.0.1:8000/api/surat/query/${this.query}`);
 
             this.result = res.data;
         } catch (error) {
