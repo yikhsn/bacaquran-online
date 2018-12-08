@@ -62,9 +62,9 @@
             <div class="ayat-nomor-surat">
                 {{ $ayat->nomor_ayat }}
             </div>
-            <div class="ayat-putar-suara">
+            <!-- <div class="ayat-putar-suara">
               <button class="ayat-suara-button ayat-suara-button-play"></button>
-            </div>
+            </div> -->
             <div class="ayat-share">
               <div class="ayat-share-twitter">
                   <a target="_blank" href="https://twitter.com/share?ref_src=surat/{{ $surat->nomor_surat }}" data-show-count="false">

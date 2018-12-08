@@ -7,12 +7,8 @@ export default class Sound {
     }
 
     getSounds(){
-        try {
-            // this.file = axios(`http://127.0.0.1:8000/api/surat/${this.id}`);
-            console.log(`get sound ${this.id}`);
-        } catch (error) {
-            console.log(error);
-        }
+        // this.file = "../../../public/assets/mp3/" + this.id + ".mp3";
+        console.log(`get sound ${this.file}`);
     }
 
     toggleSounds(){

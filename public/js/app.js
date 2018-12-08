@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -70,7 +70,7 @@
 "use strict";
 
 
-var bind = __webpack_require__(3);
+var bind = __webpack_require__(5);
 var isBuffer = __webpack_require__(20);
 
 /*global toString:true*/
@@ -397,10 +397,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(4);
+    adapter = __webpack_require__(6);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(4);
+    adapter = __webpack_require__(6);
   }
   return adapter;
 }
@@ -479,13 +479,36 @@ module.exports = defaults;
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = __webpack_require__(11);
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return elements; });
+var elements = {
+    searchForm: document.querySelector('.search-form'),
+    searchInput: document.querySelector('.search--box__input'),
+    searchRes: document.querySelector('.surats'),
+    searchResList: document.querySelector('.surats--box'),
+    searchBox: document.querySelector('.search'),
+    searchBoxLogo: document.querySelector('.search--box__logo'),
 
+    ayat: document.querySelectorAll('.ayat-suara-button')
+};
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(12);
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(19);
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -503,7 +526,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -514,7 +537,7 @@ var settle = __webpack_require__(24);
 var buildURL = __webpack_require__(26);
 var parseHeaders = __webpack_require__(27);
 var isURLSameOrigin = __webpack_require__(28);
-var createError = __webpack_require__(5);
+var createError = __webpack_require__(7);
 var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(29);
 
 module.exports = function xhrAdapter(config) {
@@ -690,7 +713,7 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -715,7 +738,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -727,7 +750,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -753,50 +776,33 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return elements; });
-var elements = {
-    searchForm: document.querySelector('.search-form'),
-    searchInput: document.querySelector('.search--box__input'),
-    searchRes: document.querySelector('.surats'),
-    searchResList: document.querySelector('.surats--box'),
-    searchBox: document.querySelector('.search'),
-    searchBoxLogo: document.querySelector('.search--box__logo'),
-
-    ayat: document.querySelectorAll('.ayat-suara-button')
-};
-
-/***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(10);
-module.exports = __webpack_require__(39);
+__webpack_require__(11);
+module.exports = __webpack_require__(41);
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_Search__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_Search__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__views_searchView__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__views_soundView__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__views_base__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_Sound__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__views_soundView__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__views_base__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_Sound__ = __webpack_require__(40);
 
 
 var _this = this;
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-__webpack_require__(13);
+__webpack_require__(14);
 
 
 
@@ -806,27 +812,27 @@ __webpack_require__(13);
 
 var state = {};
 
-// elements.searchForm.addEventListener('submit', e => {
-//     e.preventDefault();
+__WEBPACK_IMPORTED_MODULE_4__views_base__["a" /* elements */].searchForm.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-//     controlSearch();
+    controlSearch();
 
-//     searchView.clearInput();
-// });
-
-// elements.searchInput.addEventListener('keyup', () => {
-//     searchView.resizeSearchBox();
-
-//     controlSearch();
-// });
-
-__WEBPACK_IMPORTED_MODULE_4__views_base__["a" /* elements */].ayat.forEach(function (cur) {
-    cur.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        controlSound(e);
-    });
+    __WEBPACK_IMPORTED_MODULE_2__views_searchView__["a" /* clearInput */]();
 });
+
+__WEBPACK_IMPORTED_MODULE_4__views_base__["a" /* elements */].searchInput.addEventListener('keyup', function () {
+    __WEBPACK_IMPORTED_MODULE_2__views_searchView__["e" /* resizeSearchBox */]();
+
+    controlSearch();
+});
+
+// elements.ayat.forEach( cur => {    
+//     cur.addEventListener('click', e => {
+//         e.preventDefault();
+
+//         controlSound(e);
+//     });
+// });
 
 var controlSound = function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee(e) {
@@ -847,6 +853,19 @@ var controlSound = function () {
                             __WEBPACK_IMPORTED_MODULE_3__views_soundView__["a" /* toggleButton */](e);
 
                             state.sound.toggleSounds();
+
+                            // let musik = new Audio();
+
+                            // musik.src = "~/project/quran2.0/public/assets/mp3/1.mp3";
+                            // musik.loop = true;
+
+                            // if(musik.paused){
+                            //     musik.play();
+                            //     soundView.toggleButton(e);
+                            // }else {
+                            //     musik.pause();
+                            //     soundView.toggleButton(e);
+                            // }
                         } catch (error) {}
 
                     case 3:
@@ -869,7 +888,7 @@ var controlSearch = function () {
             while (1) {
                 switch (_context2.prev = _context2.next) {
                     case 0:
-                        query = __WEBPACK_IMPORTED_MODULE_2__views_searchView__["b" /* getInput */]();
+                        query = __WEBPACK_IMPORTED_MODULE_2__views_searchView__["c" /* getInput */]();
 
                         if (!query) {
                             _context2.next = 13;
@@ -878,7 +897,7 @@ var controlSearch = function () {
 
                         state.search = new __WEBPACK_IMPORTED_MODULE_1__models_Search__["a" /* default */](query);
 
-                        __WEBPACK_IMPORTED_MODULE_2__views_searchView__["a" /* clearResult */]();
+                        __WEBPACK_IMPORTED_MODULE_2__views_searchView__["b" /* clearResult */]();
 
                         _context2.prev = 4;
                         _context2.next = 7;
@@ -886,7 +905,7 @@ var controlSearch = function () {
 
                     case 7:
 
-                        __WEBPACK_IMPORTED_MODULE_2__views_searchView__["c" /* renderResult */](state.search.result);
+                        __WEBPACK_IMPORTED_MODULE_2__views_searchView__["d" /* renderResult */](state.search.result);
                         _context2.next = 13;
                         break;
 
@@ -910,7 +929,7 @@ var controlSearch = function () {
 }();
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -935,7 +954,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(12);
+module.exports = __webpack_require__(13);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -951,7 +970,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 /**
@@ -1684,7 +1703,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -1693,7 +1712,7 @@ if (hadRuntime) {
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-   true ? factory(exports, __webpack_require__(14), __webpack_require__(15)) :
+   true ? factory(exports, __webpack_require__(15), __webpack_require__(16)) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
   (factory((global.bootstrap = {}),global.jQuery,global.Popper));
 }(this, (function (exports,$,Popper) { 'use strict';
@@ -5634,7 +5653,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -16005,7 +16024,7 @@ return jQuery;
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18583,10 +18602,10 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(16)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(17)))
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 var g;
@@ -18613,13 +18632,13 @@ module.exports = g;
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios__);
 
 
@@ -18688,12 +18707,6 @@ var Search = function () {
 ;
 
 /***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(19);
-
-/***/ }),
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18701,7 +18714,7 @@ module.exports = __webpack_require__(19);
 
 
 var utils = __webpack_require__(0);
-var bind = __webpack_require__(3);
+var bind = __webpack_require__(5);
 var Axios = __webpack_require__(21);
 var defaults = __webpack_require__(1);
 
@@ -18736,9 +18749,9 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(7);
+axios.Cancel = __webpack_require__(9);
 axios.CancelToken = __webpack_require__(36);
-axios.isCancel = __webpack_require__(6);
+axios.isCancel = __webpack_require__(8);
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -19081,7 +19094,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-var createError = __webpack_require__(5);
+var createError = __webpack_require__(7);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -19514,7 +19527,7 @@ module.exports = InterceptorManager;
 
 var utils = __webpack_require__(0);
 var transformData = __webpack_require__(33);
-var isCancel = __webpack_require__(6);
+var isCancel = __webpack_require__(8);
 var defaults = __webpack_require__(1);
 var isAbsoluteURL = __webpack_require__(34);
 var combineURLs = __webpack_require__(35);
@@ -19674,7 +19687,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 "use strict";
 
 
-var Cancel = __webpack_require__(7);
+var Cancel = __webpack_require__(9);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -19770,12 +19783,12 @@ module.exports = function spread(callback) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getInput; });
-/* unused harmony export clearInput */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return clearResult; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return renderResult; });
-/* unused harmony export resizeSearchBox */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__base__ = __webpack_require__(8);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getInput; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return clearInput; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return clearResult; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return renderResult; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return resizeSearchBox; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__base__ = __webpack_require__(2);
 
 
 var getInput = function getInput() {
@@ -19810,43 +19823,24 @@ var renderSurat = function renderSurat(surat) {
 
 /***/ }),
 /* 39 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(18);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return toggleButton; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__base__ = __webpack_require__(2);
+
+
+var toggleButton = function toggleButton(e) {
+    e.target.classList.toggle('ayat-suara-button-play');
+    e.target.classList.toggle('ayat-suara-button-pause');
+};
+
+/***/ }),
+/* 40 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -19864,12 +19858,8 @@ var Sound = function () {
     _createClass(Sound, [{
         key: 'getSounds',
         value: function getSounds() {
-            try {
-                // this.file = axios(`http://127.0.0.1:8000/api/surat/${this.id}`);
-                console.log('get sound ' + this.id);
-            } catch (error) {
-                console.log(error);
-            }
+            // this.file = "../../../public/assets/mp3/" + this.id + ".mp3";
+            console.log('get sound ' + this.file);
         }
     }, {
         key: 'toggleSounds',
@@ -19897,18 +19887,10 @@ var Sound = function () {
 ;
 
 /***/ }),
-/* 68 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 41 */
+/***/ (function(module, exports) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return toggleButton; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__base__ = __webpack_require__(8);
-
-
-var toggleButton = function toggleButton(e) {
-    e.target.classList.toggle('ayat-suara-button-play');
-    e.target.classList.toggle('ayat-suara-button-pause');
-};
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

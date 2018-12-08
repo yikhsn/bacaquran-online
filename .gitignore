@@ -1,6 +1,7 @@
 /node_modules
 /public/hot
 /public/mp3
+/public/assets/mp3
 /public/storage
 /storage/*.key
 /vendor
@@ -15,3 +16,4 @@ yarn-error.log
 .phpunit.result.cache
 *.zip
 *.sql
+*.mp3

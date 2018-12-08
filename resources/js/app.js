@@ -8,27 +8,27 @@ import Sound from './models/Sound';
 
 const state = {};
 
-// elements.searchForm.addEventListener('submit', e => {
-//     e.preventDefault();
+elements.searchForm.addEventListener('submit', e => {
+    e.preventDefault();
 
-//     controlSearch();
+    controlSearch();
 
-//     searchView.clearInput();
-// });
-
-// elements.searchInput.addEventListener('keyup', () => {
-//     searchView.resizeSearchBox();
-    
-//     controlSearch();
-// });
-
-elements.ayat.forEach( cur => {    
-    cur.addEventListener('click', e => {
-        e.preventDefault();
-        
-        controlSound(e);
-    });
+    searchView.clearInput();
 });
+
+elements.searchInput.addEventListener('keyup', () => {
+    searchView.resizeSearchBox();
+    
+    controlSearch();
+});
+
+// elements.ayat.forEach( cur => {    
+//     cur.addEventListener('click', e => {
+//         e.preventDefault();
+        
+//         controlSound(e);
+//     });
+// });
 
 const controlSound = async (e) => {
     const id = e.target.parentNode.parentNode.parentNode.id;
@@ -42,6 +42,21 @@ const controlSound = async (e) => {
         soundView.toggleButton(e);
 
         state.sound.toggleSounds();
+
+
+
+        // let musik = new Audio();
+
+        // musik.src = "~/project/quran2.0/public/assets/mp3/1.mp3";
+        // musik.loop = true;
+
+        // if(musik.paused){
+        //     musik.play();
+        //     soundView.toggleButton(e);
+        // }else {
+        //     musik.pause();
+        //     soundView.toggleButton(e);
+        // }
 
     } catch (error) {
         
