@@ -14,7 +14,7 @@
 /**
  * Controller for main page like home etc
  */
-Route::get('/', 'MainController@index')->name('home');
+Route::get('/', 'MainController@read')->name('home');
 
 Route::get('/surat', 'MainController@read');
 

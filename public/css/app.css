@@ -10727,6 +10727,7 @@ nav {
   height: 60px;
   font-size: 1.5rem;
   background-color: #ffffff;
+  z-index: 200;
 }
 
 .scrollable-menu {
@@ -11043,7 +11044,7 @@ header {
 }
 
 .search {
-  height: 80vh;
+  height: 65vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#00000088), to(#00000088)), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
   background-image: linear-gradient(to right bottom, #00000088, #00000088), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
   background-size: cover;
@@ -11172,8 +11173,144 @@ header {
   float: right;
 }
 
-.keterangan-surat-container {
-  height: 60vh;
+@media only screen and (max-width: 768px) {
+  .search {
+    height: 65vh;
+  }
+
+  .search--box {
+    font-size: 1.5rem;
+  }
+
+  .search--box__logo {
+    margin-bottom: 40px;
+  }
+
+  .search--box__logo img {
+    width: 250px;
+    height: auto;
+  }
+
+  .search--box__input {
+    display: inline-block;
+    width: 85%;
+    height: 50px;
+  }
+
+  .search--box__button {
+    display: none;
+  }
+
+  .surats {
+    margin: 40px 60px;
+  }
+
+  .surats--title {
+    margin-bottom: 30px;
+  }
+
+  .surats--title h2 {
+    font-size: 2.5rem;
+  }
+
+  .surats--title a {
+    margin-bottom: 40px;
+  }
+
+  .surats--title a:first-child {
+    margin-right: 20px;
+  }
+
+  .surats--box__single {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-radius: 100px;
+  }
+
+  .surat {
+    padding: 10px 20px;
+  }
+
+  .surat--nomor {
+    font-size: 1.3rem;
+  }
+
+  .surat--nama {
+    font-size: 1.8rem;
+  }
+
+  .surat--nama-arab {
+    font-weight: 500;
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .search {
+    height: 40vh;
+  }
+
+  .search--box {
+    font-size: 1.4rem;
+  }
+
+  .search--box__logo {
+    margin-bottom: 20px;
+  }
+
+  .search--box__logo img {
+    width: 200px;
+    height: auto;
+  }
+
+  .search--box__input {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+  }
+
+  .surats {
+    margin: 40px 20px;
+  }
+
+  .surats--title {
+    margin-bottom: 10px;
+  }
+
+  .surats--title h2 {
+    font-size: 2rem;
+  }
+
+  .surats--title a {
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
+
+  .surats--box__single {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .surat {
+    padding: 10px 20px;
+  }
+
+  .surat--nomor {
+    font-size: 1.6rem;
+  }
+
+  .surat--nama {
+    font-size: 1.8rem;
+  }
+
+  .surat--nama-arab {
+    font-weight: 500;
+    font-size: 3.5rem;
+  }
+}
+
+.surat-header {
+  height: 40vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#00000088), to(#00000088)), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
   background-image: linear-gradient(to right bottom, #00000088, #00000088), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
   /* background-color: #333333; */
@@ -11184,7 +11321,7 @@ header {
   margin-bottom: 0;
 }
 
-.keterangan-surat {
+.surat-header .surat-keterangan {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11193,22 +11330,21 @@ header {
   text-align: center;
   width: 60%;
   height: 100%;
-  font-size: 1.5rem;
   color: #ffffff;
 }
 
-.keterangan-surat-nama-arab {
+.surat-header .surat-keterangan__nama-arab {
   font-family: 'scheherazade';
   font-size: 15rem;
   margin: 0;
 }
 
-.keterangan-surat-nama-indo {
+.surat-header .surat-keterangan__nama-indo {
   font-size: 3rem;
   margin: 0;
 }
 
-.keterangan-surat-arti-nama {
+.surat-header .surat-keterangan__arti-nama {
   font-size: 1.5rem;
   margin: 0;
 }
@@ -11224,7 +11360,7 @@ header {
           justify-content: center;
 }
 
-.body-ayats {
+.body-ayats-container .body-ayats {
   margin: 40px 150px;
 }
 
@@ -11242,12 +11378,12 @@ header {
   margin-bottom: 0;
 }
 
-.single-ayat-kiri {
+.single-ayat__kiri {
   width: 10%;
   display: block;
 }
 
-.ayat-nomor-surat {
+.single-ayat__kiri--nomor {
   color: #FBD379;
   font-size: 1.5rem;
   padding: 12px 0;
@@ -11264,12 +11400,29 @@ header {
   margin-bottom: 20px;
 }
 
-.ayat-putar-suara {
+.single-ayat__kiri--putar {
   width: 5rem;
   margin-bottom: 20px;
 }
 
-.ayat-share {
+.single-ayat__kiri--putar button {
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #333333;
+  outline: none;
+}
+
+.single-ayat__kiri--putar .ayat-suara-button-play {
+  background-image: url(/images/play.svg?286ab3ff958c2f4a474974d50c71cf9d);
+}
+
+.single-ayat__kiri--putar .ayat-suara-button-pause {
+  background-image: url(/images/pause.svg?6e26b524654f04810f5fe8b464a1a3fb);
+}
+
+.single-ayat__kiri--share {
   width: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11279,19 +11432,19 @@ header {
           justify-content: space-between;
 }
 
-.ayat-share-twitter {
+.single-ayat__kiri--share .ayat-share-twitter {
   width: 2rem;
 }
 
-.ayat-share-facebook {
+.single-ayat__kiri--share .ayat-share-facebook {
   width: 2rem;
 }
 
-.single-ayat-kanan {
+.single-ayat__kanan {
   width: 90%;
 }
 
-.ayat-teks-arab {
+.single-ayat__kanan--teks-arab {
   font-family: 'scheherazade';
   font-size: 5rem;
   color: #FBD379;
@@ -11305,25 +11458,101 @@ header {
   text-align: right;
 }
 
-.ayat-terjemahan {
+.single-ayat__kanan--ayat-terjemahan {
   font-size: 2rem;
   color: #ffffff;
 }
 
-.ayat-putar-suara button {
-  border: none;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  background-color: #333333;
-  outline: none;
+@media all and (max-width: 768px) {
+  .body-ayats-container .body-ayats {
+    margin: 20px 80px;
+  }
 }
 
-.ayat-putar-suara .ayat-suara-button-play {
-  background-image: url(/images/play.svg?286ab3ff958c2f4a474974d50c71cf9d);
-}
+@media all and (max-width: 480px) {
+  .surat-header {
+    height: 25vh;
+  }
 
-.ayat-putar-suara .ayat-suara-button-pause {
-  background-image: url(/images/pause.svg?6e26b524654f04810f5fe8b464a1a3fb);
+  .surat-header .surat-keterangan {
+    width: 100%;
+    height: 100%;
+  }
+
+  .surat-header .surat-keterangan__nama-arab {
+    font-size: 8rem;
+    margin: 0;
+  }
+
+  .surat-header .surat-keterangan__nama-indo {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .surat-header .surat-keterangan__arti-nama {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .body-ayats-container .body-ayats {
+    margin: 20px 40px;
+  }
+
+  .single-ayat {
+    font-size: 2rem;
+    padding: 40px 0;
+  }
+
+  .single-ayat:last-child {
+    margin-bottom: 0;
+  }
+
+  .single-ayat__kiri {
+    width: 20%;
+  }
+
+  .single-ayat__kiri--nomor {
+    font-size: 1.2rem;
+    padding: 4px 0;
+    width: 3rem;
+    border: 1px solid #FBD379;
+    margin-bottom: 10px;
+  }
+
+  .single-ayat__kiri--putar {
+    width: 3rem;
+    margin-bottom: 0;
+  }
+
+  .single-ayat__kiri--putar button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .single-ayat__kiri--share {
+    width: 4rem;
+  }
+
+  .single-ayat__kiri--share .ayat-share-twitter {
+    width: 2rem;
+  }
+
+  .single-ayat__kiri--share .ayat-share-facebook {
+    width: 2rem;
+  }
+
+  .single-ayat__kanan {
+    width: 80%;
+  }
+
+  .single-ayat__kanan--teks-arab {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .single-ayat__kanan--ayat-terjemahan {
+    font-size: 1.6rem;
+  }
 }
 

@@ -826,13 +826,13 @@ __WEBPACK_IMPORTED_MODULE_4__views_base__["a" /* elements */].searchInput.addEve
     controlSearch();
 });
 
-// elements.ayat.forEach( cur => {    
-//     cur.addEventListener('click', e => {
-//         e.preventDefault();
+__WEBPACK_IMPORTED_MODULE_4__views_base__["a" /* elements */].ayat.forEach(function (cur) {
+    cur.addEventListener('click', function (e) {
+        e.preventDefault();
 
-//         controlSound(e);
-//     });
-// });
+        controlSound(e);
+    });
+});
 
 var controlSound = function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee(e) {

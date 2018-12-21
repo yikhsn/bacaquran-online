@@ -22,13 +22,13 @@ elements.searchInput.addEventListener('keyup', () => {
     controlSearch();
 });
 
-// elements.ayat.forEach( cur => {    
-//     cur.addEventListener('click', e => {
-//         e.preventDefault();
+elements.ayat.forEach( cur => {    
+    cur.addEventListener('click', e => {
+        e.preventDefault();
         
-//         controlSound(e);
-//     });
-// });
+        controlSound(e);
+    });
+});
 
 const controlSound = async (e) => {
     const id = e.target.parentNode.parentNode.parentNode.id;

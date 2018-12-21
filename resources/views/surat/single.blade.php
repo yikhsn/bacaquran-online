@@ -44,12 +44,12 @@
       </div>
     </nav>
 
-    <div class="keterangan-surat-container">
-      <div class="keterangan-surat">
-          <div class="keterangan-surat-nama-arab"> {{ $surat->nama_surat_arab }} </div>
+    <div class="surat-header">
+      <div class="surat-keterangan">
+          <div class="surat-keterangan__nama-arab"> {{ $surat->nama_surat_arab }} </div>
 
-          <h1 class="keterangan-surat-nama-indo">{{ $surat->nama_surat }}</h1>
-          <h2 class="keterangan-surat-arti-nama">{{ $surat->arti_nama }}</h2>        
+          <h1 class="surat-keterangan__nama-indo">{{ $surat->nama_surat }}</h1>
+          <h2 class="surat-keterangan__arti">{{ $surat->arti_nama }}</h2>        
       </div>
     </div>
 
@@ -58,31 +58,31 @@
         @foreach ($surat->ayats as $ayat)
             
         <li id="{{ $ayat->id }}" class="single-ayat">
-          <div class="single-ayat-kiri">
-            <div class="ayat-nomor-surat">
+          <div class="single-ayat__kiri">
+            <div class="single-ayat__kiri--nomor">
                 {{ $ayat->nomor_ayat }}
             </div>
-            <!-- <div class="ayat-putar-suara">
+            <!-- <div class="single-ayat__kiri--putar">
               <button class="ayat-suara-button ayat-suara-button-play"></button>
             </div> -->
-            <div class="ayat-share">
+            <div class="single-ayat__kiri--share">
               <div class="ayat-share-twitter">
-                  <a target="_blank" href="https://twitter.com/share?ref_src=surat/{{ $surat->nomor_surat }}" data-show-count="false">
+                  <a target="_blank" href="" data-show-count="false">
                     <img src="{{  URL::asset('assets/img/twitter.svg') }}" alt="">
                   </a>
               </div>
               <div class="ayat-share-facebook">
-                  <a target="_blank" href="http://www.facebook.com/sharer.php?u=surat/{{ $surat->nomor_surat }}">
+                  <a target="_blank" href="">
                     <img src="{{  URL::asset('assets/img/facebook.svg') }}" alt="">
                   </a>
               </div>
             </div>
           </div>
-          <div class="single-ayat-kanan">
-            <div class="ayat-teks-arab">
+          <div class="single-ayat__kanan">
+            <div class="single-ayat__kanan--teks-arab">
                 {{ $ayat->teks_arab }}
             </div>
-            <div class="ayat-terjemahan">
+            <div class="single-ayat__kanan--ayat-terjemahan">
               {{ $ayat->terjemahan_idn }}
             </div>
           </div>
