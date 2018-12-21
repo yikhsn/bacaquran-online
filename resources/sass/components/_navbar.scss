@@ -1,18 +1,23 @@
 nav{
-    border-bottom: 1px solid white;
-    height: 60px;
-    font-size: 1.5rem;
-    background-color: #ffffff;
-    z-index: 200;
-  }
-  
-  .scrollable-menu {
-    height: auto;
-    max-height: 400px;
-    width: 200px;
-    overflow-x: hidden;
-  }
-  
-  .dropdown-item {
-    font-size: 1.4rem;
-  } 
+  border-bottom: 1px solid white;
+  height: 60px;
+  font-size: 1.5rem;
+  background-color: #ffffff;
+  z-index: 200;
+}
+
+.navbar-nav {
+  background-color: #ffffff;
+  width: 100vw;
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height: 400px;
+  width: 200px;
+  overflow-x: hidden;
+}
+
+.dropdown-item {
+  font-size: 1.4rem;
+} 

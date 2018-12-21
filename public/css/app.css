@@ -10730,6 +10730,11 @@ nav {
   z-index: 200;
 }
 
+.navbar-nav {
+  background-color: #ffffff;
+  width: 100vw;
+}
+
 .scrollable-menu {
   height: auto;
   max-height: 400px;
@@ -11319,6 +11324,7 @@ header {
   position: relative;
   background-attachment: fixed;
   margin-bottom: 0;
+  z-index: -1;
 }
 
 .surat-header .surat-keterangan {
