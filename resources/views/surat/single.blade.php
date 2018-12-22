@@ -57,7 +57,7 @@
       <ul class="body-ayats">
         @foreach ($surat->ayats as $ayat)
             
-        <li id="{{ $ayat->id }}" class="single-ayat">
+        <li id="{{ $ayat->nomor_ayat }}" class="single-ayat">
           <div class="single-ayat__kiri">
             <div class="single-ayat__kiri--nomor">
                 {{ $ayat->nomor_ayat }}

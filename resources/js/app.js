@@ -16,6 +16,10 @@ elements.searchForm.addEventListener('submit', e => {
     searchView.clearInput();
 });
 
+elements.searchInput.addEventListener('click', () => {
+    searchView.resizeSearchBox();
+});
+
 elements.searchInput.addEventListener('keyup', () => {
     searchView.resizeSearchBox();
     
