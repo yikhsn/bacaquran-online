@@ -11178,9 +11178,9 @@ header {
   float: right;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   .search {
-    height: 65vh;
+    height: 40vh;
   }
 
   .search--box {
@@ -11250,7 +11250,7 @@ header {
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 600px) {
   .search {
     height: 40vh;
   }
@@ -11301,7 +11301,7 @@ header {
   }
 
   .surat--nomor {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 
   .surat--nama {
@@ -11469,13 +11469,13 @@ header {
   color: #ffffff;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .body-ayats-container .body-ayats {
     margin: 20px 80px;
   }
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 600px) {
   .surat-header {
     height: 25vh;
   }

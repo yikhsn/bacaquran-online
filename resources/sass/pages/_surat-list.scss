@@ -123,12 +123,11 @@
     font-size: 4rem;
     float: right;
   }
-
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   .search {
-    height: 65vh;
+    height: 40vh;
     
     &--box {
       font-size: 1.5rem;
@@ -175,7 +174,7 @@
     }
   
     &--box {
-      
+
       &__single {
         font-size: 1rem;
         margin-bottom: 10px;
@@ -201,12 +200,10 @@
       font-weight: 500;
       font-size: 3.5rem;
     }
-  
   }
-  
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 600px) {
   .search {
     height: 40vh;
     
@@ -259,9 +256,8 @@
   .surat {
     padding: 10px 20px;
 
-    
     &--nomor {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
     }
   
     &--nama {
@@ -272,7 +268,5 @@
       font-weight: 500;
       font-size: 3.5rem;
     }
-  
-  }
-  
+  } 
 }
