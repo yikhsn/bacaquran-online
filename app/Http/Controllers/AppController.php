@@ -12,7 +12,7 @@ class AppController extends Controller
     {
         $id = request('id');
 
-        $ayats = Ayat::where('id', $id)->with('surat')->get();
+        $ayats = Ayat::where('id', $id)->with('surat')->first();
 
         return $ayats;
     }
